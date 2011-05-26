@@ -12,12 +12,59 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
+        <netbeans.hint.j2eeVersion>1.6</netbeans.hint.j2eeVersion>
     </properties>
 
     <dependencies>
+        
+        <dependency>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        
+          <dependency>
+            <groupId>com.google.code.geocoder-java</groupId>
+            <artifactId>geocoder-java</artifactId>
+            <version>0.5</version>
+          </dependency>                                 
+        
+        <!-- JSF 2 dependencies -->
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.0.4-b09</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>2.0.4-b09</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
+            <artifactId>javaee-api</artifactId>
             <version>6.0</version>
             <scope>provided</scope>
         </dependency>
@@ -80,5 +127,22 @@
         </plugins>
         <finalName>makampuni</finalName>
     </build>
-
+    <repositories>
+        <repository>
+            <url>http://download.java.net/maven/2/</url>
+            <id>jsf20</id>
+            <layout>default</layout>
+            <name>Repository for library Library[jsf20]</name>
+        </repository>
+        <repository>
+            <url>http://repository.prime.com.tr/</url>
+            <id>primefaces</id>
+            <layout>default</layout>
+            <name>Repository for library Library[primefaces]</name>
+        </repository>
+        <repository>
+            <id>geocoder-java</id>
+            <url>https://geocoder-java.googlecode.com/svn/mavenrepo</url>
+        </repository>
+    </repositories>
 </project>
