@@ -1,0 +1,8 @@
+Makampuni
+==========
+
+Find companies based on criteria. Faceted search.
+
+* Technologies:
+** Solr
+** EJB 3.1 / JSF
